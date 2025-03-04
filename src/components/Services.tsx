@@ -5,7 +5,7 @@ import { ArrowRight, Rocket, BookOpen, FileText, UserCheck } from "lucide-react"
 const services = [
   {
     icon: <Rocket className="w-8 h-8 text-secondary" />,
-    title: "Investor Matchmaking",
+    title: "Investor ",
     description: "Meet your funding soulmates – we'll connect you with investors who get your vision and want in.",
     link: "#",
     delay: "0s",

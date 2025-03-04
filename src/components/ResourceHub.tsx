@@ -6,36 +6,36 @@ type ResourceHubProps = {
   fullPage?: boolean;
 };
 
-const resourceCategories = ["All", "E-Books", "Guides", "Templates", "Case Studies"];
+const resourceCategories = ["All", "Marketing", "Sales", "Entrepreneurship", "Case Studies"];
 
 const resources = [
   {
     id: 1,
     title: "The Complete Guide to Government Funding 2025",
-    description: "A comprehensive guide to government funding opportunities in 2025.",
+    description: "Explore government grants, schemes, and incentives for Indian startups in 2025, including eligibility and application details.",
     category: "E-Books",
     image: "https://images.unsplash.com/photo-1589561253898-768105ca91a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80",
     icon: <BookOpen className="w-5 h-5" />,
     isFeatured: true,
     isNew: false,
-    isPremium: false,
+    isPremium: true,
   },
   {
     id: 2,
-    title: "Ultimate Pitch Deck Template",
-    description: "A proven pitch deck format that has helped startups raise over $10M collectively.",
-    category: "Templates",
+    title: "Marketing for Startups",
+    description: "Gain real-world insights and proven marketing techniques, created by industry-leading experts, that set your business apart.",
+    category: "E-Books",
     image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    icon: <FileText className="w-5 h-5" />,
+    icon: <BookOpen className="w-5 h-5" />,
     isFeatured: false,
     isNew: true,
     isPremium: false,
   },
   {
     id: 3,
-    title: "SaaS Growth Strategies",
-    description: "Learn proven customer acquisition methods for SaaS startups from top experts.",
-    category: "Guides",
+    title: "Sales ",
+    description: "Discover actionable insights and time-tested sales strategies, developed by top sales innovators, that distinguish your business from the competition.",
+    category: "E-Books",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80",
     icon: <BookOpen className="w-5 h-5" />,
     isFeatured: false,
@@ -44,25 +44,36 @@ const resources = [
   },
   {
     id: 4,
-    title: "Financial Modeling for Startups",
-    description: "Step-by-step guide to creating financial projections that impress investors.",
-    category: "Templates",
+    title: "Entrepreneurship",
+    description: "Discover actionable insights and time-tested entrepreneurial strategies, developed by visionary founders, that set your venture apart in today's competitive landscape.",
+    category: "E-Books",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    icon: <FileText className="w-5 h-5" />,
+    icon: <BookOpen className="w-5 h-5" />,
     isFeatured: false,
     isNew: false,
     isPremium: false,
   },
   {
     id: 5,
-    title: "Founder Stories: From Zero to IPO",
-    description: "Video interviews with founders who have taken their startups from idea to IPO.",
+    title: "Essential Q&A for building a startup",
+    description: "A complete Q&A guide for entrepreneurs on how to build a successful startup.",
+    category: "E-Books",
+    image: "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    icon: <BookOpen className="w-5 h-5" />,
+    isFeatured: false,
+    isNew:false,
+    isPremium: true,
+  },
+  {
+    id: 5,
+    title: "Case Studies for building a startup",
+    description: "A complete Q&A guide for entrepreneurs on how to build a successful startup.",
     category: "Case Studies",
     image: "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    icon: <Video className="w-5 h-5" />,
+    icon: <BookOpen className="w-5 h-5" />,
     isFeatured: false,
     isNew: true,
-    isPremium: true,
+    isPremium: false,
   },
 ];
 
@@ -99,7 +110,7 @@ const ResourceHub = ({ fullPage = false }: ResourceHubProps) => {
         </div>
 
         {featuredResource && (
-          <div className="mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <div className="mb-12 animate-fade-in " style={{ animationDelay: "0.3s" }}>
             <div className="relative rounded-2xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 z-10"></div>
               <img
@@ -213,33 +224,14 @@ const ResourceHub = ({ fullPage = false }: ResourceHubProps) => {
                     href="#"
                     className="group inline-flex items-center text-primary font-medium"
                   >
-                    {resource.isPremium ? "Unlock Access" : "Download Free"}{" "}
+                    {resource.isPremium ? "Download Free" : "Get E-Books"}{" "}
                     <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </a>
-                  <div className="flex items-center gap-1">
-                    <svg
-                      className="w-4 h-4 text-yellow-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <span className="text-sm text-text-muted">4.8</span>
-                  </div>
+                  
                 </div>
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-12 text-center animate-fade-in" style={{ animationDelay: "0.6s" }}>
-          <a
-            href="#"
-            className="btn-hover inline-flex items-center justify-center rounded-md px-6 py-3 font-semibold text-white bg-primary shadow-md"
-          >
-            Browse All Resources
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </a>
         </div>
       </Container>
     </section>

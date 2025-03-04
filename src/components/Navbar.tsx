@@ -42,10 +42,10 @@ const Navbar = () => {
         <Container>
           <nav className="flex items-center justify-between">
             <a
-              href="#"
+              href="/"
               className="text-primary font-poppins font-bold text-2xl flex items-center"
             >
-              <span className="text-secondary">The</span>&nbsp;Startup Wallah
+              The Startup Wallah
             </a>
 
             {/* Desktop Navigation */}
@@ -104,7 +104,7 @@ const Navbar = () => {
                 className="p-2 text-text-dark hover:text-primary transition-colors rounded-full hover:bg-primary/5"
                 aria-label="Search"
               >
-                <Search className="h-5 w-5" />
+                {/* <Search className="h-5 w-5" /> */}
               </button>
               <a
                 href="#cta"

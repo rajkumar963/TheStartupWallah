@@ -2,7 +2,8 @@
 import React from "react";
 import { Container } from "./ui/container";
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Instagram, Twitter, Linkedin, Facebook } from "lucide-react";
+import { Mail, MapPin, Instagram } from "lucide-react";
+import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -20,18 +21,17 @@ const Footer = () => {
                 Bridging the gap between startups and success through investor access, learning resources, and expert-backed business services.
               </p>
               <div className="flex space-x-4 mt-6">
-                <a href="#" className="hover:text-secondary transition-colors">
+                <a href="#" className="hover:text-pink-500 transition-colors">
                   <Instagram size={20} />
                 </a>
-                <a href="#" className="hover:text-secondary transition-colors">
-                  <Twitter size={20} />
+                
+                <a href="https://www.linkedin.com/company/the-startup-wallah/about/" className="hover:text-blue-500 transition-colors">
+                  <FaLinkedinIn size={20} />
                 </a>
-                <a href="#" className="hover:text-secondary transition-colors">
-                  <Linkedin size={20} />
+                <a href=" https://wa.me/message/DB45B2CA3YBTE1 " className="hover:text-green-500 transition-colors">
+                  <FaWhatsapp size={20} />
                 </a>
-                <a href="#" className="hover:text-secondary transition-colors">
-                  <Facebook size={20} />
-                </a>
+                
               </div>
             </div>
 
@@ -50,9 +50,7 @@ const Footer = () => {
                 <li>
                   <Link to="/blog" className="hover:text-secondary transition-colors">Blog</Link>
                 </li>
-                <li>
-                  <Link to="/contact" className="hover:text-secondary transition-colors">Contact</Link>
-                </li>
+                
               </ul>
             </div>
 
@@ -68,9 +66,7 @@ const Footer = () => {
                 <li>
                   <a href="#" className="hover:text-secondary transition-colors">Pitch Deck Services</a>
                 </li>
-                <li>
-                  <a href="#" className="hover:text-secondary transition-colors">Expert Mentorship</a>
-                </li>
+                
                 <li>
                   <a href="#" className="hover:text-secondary transition-colors">Business Structuring</a>
                 </li>
@@ -82,15 +78,15 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <MapPin size={20} className="mr-2 shrink-0 mt-1" />
-                  <span>123 Innovation Street, Startup Hub, Mumbai 400001</span>
+                  <span>Whitefield, Bangalore 560066</span>
                 </li>
                 <li className="flex items-center">
-                  <Phone size={20} className="mr-2 shrink-0" />
+                  <FaWhatsapp size={20} className="mr-2 shrink-0" />
                   <span>+91 98765 43210</span>
                 </li>
                 <li className="flex items-center">
                   <Mail size={20} className="mr-2 shrink-0" />
-                  <span>hello@startupwallah.com</span>
+                  <span>ashutosh@thestartupwallah.com</span>
                 </li>
               </ul>
             </div>
